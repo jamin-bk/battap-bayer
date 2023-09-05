@@ -215,7 +215,7 @@ header h1{
 }
 
 .header-middle{
-    max-width:1600px;
+    max-width:2200px;
     min-width:940px;
     margin: 0 auto;
     display:-webkit-box;
@@ -231,7 +231,8 @@ header h1{
 #header-middle-text{
     background-image: url("images/original.jfif");
     background-position: right bottom;
-    background-size: contain;
+    background-size: 50%;
+    
     background-repeat: no-repeat;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -250,6 +251,13 @@ header h1{
         -ms-grid-row-align:center;
         align-self:center;
     padding-bottom: 130px;
+}
+@media screen and (max-width:2200px) {
+    #header-middle-text{
+        width:45%;
+        padding-right: 50%;
+        padding-bottom: 360px;
+    }
 }
 
 
@@ -352,6 +360,14 @@ section{
     min-width: 1000px;
 }
 
+@media screen and (max-width:2200px) {
+    section{
+        padding:0;
+        max-width: 2200px;
+        min-width: 1000px;
+    }
+}
+
 @media screen and (max-width:440px) {
     section{
         margin:0 auto;
@@ -367,6 +383,7 @@ section{
     color: white;
     font-weight: 300;
 }
+
 
 #study-program h2{
     font-family: 'Gilroy Black';
@@ -418,6 +435,11 @@ section{
     width: 100%;
     margin:30px 0;
 }
+
+.program-number-last{
+    flex-direction:row-reverse;
+}
+
 .pro-num-line{
     border-right: 3px solid white;
 }
