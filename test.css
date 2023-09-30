@@ -214,8 +214,81 @@ header h1{
     }
 }
 
-.header-middle{
-    max-width:1600px;
+.image {
+    display: flex;
+    width: 50%; 
+    
+}
+
+.image img {
+    width: 100%;
+    
+}
+#header-button {
+     padding: 10px 15px; 
+     width: 150px;
+     background-color:red;
+     border-radius:20px;
+     text-align: center;   
+}
+#header-button a {
+    color:white;
+    text-decoration: none;
+}
+.header-middle {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    width: 100%;
+}
+#header-middle-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 0 0 0 0;
+}
+#header-h {
+    width: 70%;
+}
+.icons {
+    padding-top: 15px;
+    display:flex;
+    flex-direction: row;
+}
+.icons img {
+    width: 30%;
+    padding: 2.5%;
+}
+@media (max-width:440px) {
+    .header-middle {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .image {
+        width: 100%; 
+    }
+    #header-middle-text {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .header-middle{
+    max-width:2200px;
     min-width:940px;
     margin: 0 auto;
     display:-webkit-box;
@@ -231,7 +304,8 @@ header h1{
 #header-middle-text{
     background-image: url("images/original.jfif");
     background-position: right bottom;
-    background-size: contain;
+    background-size: 50%;
+    
     background-repeat: no-repeat;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -250,6 +324,13 @@ header h1{
         -ms-grid-row-align:center;
         align-self:center;
     padding-bottom: 130px;
+}
+@media screen and (max-width:2200px) {
+    #header-middle-text{
+        width:45%;
+        padding-right: 50%;
+        padding-bottom: 360px;
+    }
 }
 
 
@@ -271,7 +352,6 @@ header h1{
     border: 0;
     text-align: center;
     border-radius:30px;
-    /* cursor: pointer; */
     -webkit-appearance: none;
        -moz-appearance:    none;
        appearance:         none;
@@ -331,12 +411,6 @@ header h1{
        appearance:         none;
     }
 }
-
-main{
-    margin:0 auto;
-    font-family: 'Gilroy Medium';
-    
-}
 @media screen and (max-width:375px){
     #header-middle-text{
         padding-right: 100%;
@@ -345,11 +419,26 @@ main{
             align-self: center;
         margin-right: -60%;
     }
+} */
+
+main{
+    margin:0 auto;
+    font-family: 'Gilroy Medium';
+    
 }
+
 section{
     margin:0 auto;
     max-width: 1600px;
     min-width: 1000px;
+}
+
+@media screen and (max-width:2200px) {
+    section{
+        padding:0;
+        max-width: 2200px;
+        min-width: 1000px;
+    }
 }
 
 @media screen and (max-width:440px) {
@@ -367,6 +456,7 @@ section{
     color: white;
     font-weight: 300;
 }
+
 
 #study-program h2{
     font-family: 'Gilroy Black';
@@ -418,6 +508,11 @@ section{
     width: 100%;
     margin:30px 0;
 }
+
+.program-number-last{
+    flex-direction:row-reverse;
+}
+
 .pro-num-line{
     border-right: 3px solid white;
 }
@@ -1002,6 +1097,10 @@ input[id="scales"]:checked ~ #Mp-block #Mp {
     display: block;
     animation: go 1.2s ease;
 }
+input[id="format-1"]:checked ~ #Mp-block #Mp {
+    display: block;
+    animation: go 1.2s ease;
+}
 input[id="scales"]:checked ~ #course-form-block #mv .arrow-img{
     transform: rotate(180deg);
 }
@@ -1010,11 +1109,19 @@ input[id="scales1"]:checked ~ #Mp-block #Mp1 {
     display: block;
     animation: go 1.2s ease;
 }
+input[id="format-2"]:checked ~ #Mp-block #Mp1 {
+    display: block;
+    animation: go 1.2s ease;
+}
 input[id="scales1"]:checked ~ #course-form-block #mv1 .arrow-img{
     transform: rotate(180deg);
 }
 
 input[id="scales2"]:checked ~ #Mp-block #Mp2 {
+    display: block;
+    animation: go 1.2s ease;
+}
+input[id="format-3"]:checked ~ #Mp-block #Mp2 {
     display: block;
     animation: go 1.2s ease;
 }
@@ -1066,6 +1173,9 @@ input[id="scales2"]:checked ~ #course-form-block #mv2 .arrow-img{
         border-radius: 12px;
         margin:2px 0;
     }
+    #course-form h1{
+        font-size: 26px;
+    }
     .course-form-list h3{
         -ms-flex-item-align: center;
             -ms-grid-row-align: center;
@@ -1113,6 +1223,19 @@ input[id="scales2"]:checked ~ #course-form-block #mv2 .arrow-img{
 #form-list p span{
     font-size: 26px;
     color:rgb(40, 106, 191);
+}
+
+
+
+@media screen and (max-width:440px) {
+    #form-list p{
+        font-size: 18px;
+    }
+    #form-list p span{
+        font-size: 18px;
+        color:rgb(40, 106, 191);
+    }
+    
 }
 
 #form li{
@@ -1309,7 +1432,7 @@ button[id="submitFF"]{
     }
     
     #form h1{
-        font-size:40px;
+        font-size:26px;
         font-weight: 500;
     }
     #form h3{
